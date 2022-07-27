@@ -22,23 +22,38 @@
 
 # Short operations----->
 
-arr = [1,33,2,60,20,50,31,11,7]
-temp = 0
+# arr = [1,33,2,60,20,50,31,11,7]
+# temp = 0
 
-# Displaying elements of original array
-print("Elements of original array : ")
+# # Displaying elements of original array
+# print("Elements of original array : ")
+# for i in range(0,len(arr)):
+#     print(arr[i],end=" ")
+
+# # Short the array in ascending order
+# for i in range(0,len(arr)):
+#     for j in range(i+1, len(arr)):
+#         if(arr[i]> arr[j]):
+#             temp = arr[i]
+#             arr[i] = arr[j]
+#             arr[j] = temp
+
+# # Display elements of the array after sorting
+# print("\nElements of array sorted in ascending order : ")
+# for i in range(0,len(arr)):
+#     print(arr[i], end=" ")
+
+
+
+# Search operations ----->
+
+import array
+arr = array.array('i',[1,2,3,1,2,7])
+print("The new created array is : ",end="")
 for i in range(0,len(arr)):
     print(arr[i],end=" ")
-
-# Short the array in ascending order
-for i in range(0,len(arr)):
-    for j in range(i+1, len(arr)):
-        if(arr[i]> arr[j]):
-            temp = arr[i]
-            arr[i] = arr[j]
-            arr[j] = temp
-
-# Display elements of the array after sorting
-print("\nElements of array sorted in ascending order : ")
-for i in range(0,len(arr)):
-    print(arr[i], end=" ")
+print("\r")
+print("The index no of 1st occurrence of 7 is : ",end ="")
+print(arr.index(7))
+print("The index no of 1st occurrence of 1 is : ", end="")
+print(arr.index(1))
