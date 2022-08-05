@@ -13,7 +13,7 @@ class Queue:
         self.queue.append(item)
     def dequeue(self):
         if len(self.queue) < 1:
-            return None
+            return self.queue
         return self.queue.pop(0)
     def display(self):
         print(self.queue)
@@ -27,5 +27,6 @@ q.enqueue(4)
 q.enqueue(5)
 q.display()
 q.dequeue()
-print("After removing an element..")
+q.dequeue()
+print("\nAfter removing two element..")
 q.display()
