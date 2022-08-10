@@ -43,6 +43,15 @@ class LinkedList:
         a.next = ne
 
 
+    def insert_at_Specified_Node(self,pos,data):
+        print()
+        npn = Node(data)
+        a = self.head
+        for i in range(1,pos-1):
+            a = a.next
+        npn.next = a.next
+        a.next = npn
+
 n1 = Node(5)
 sll = LinkedList()
 sll.head = n1
@@ -58,4 +67,6 @@ sll.traversal()
 sll.insert_at_beginning(66)
 sll.traversal()
 sll.insert_at_End(39)
+sll.traversal()
+sll.insert_at_Specified_Node(3,100)
 sll.traversal()
