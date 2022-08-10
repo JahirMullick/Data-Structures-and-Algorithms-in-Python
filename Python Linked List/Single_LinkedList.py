@@ -34,6 +34,14 @@ class LinkedList:
         nb.next = self.head  # nb.next = n1
         self.head = nb       # sll.head = nb
 
+    def insert_at_End(self,data):
+        print()
+        ne = Node(data)
+        a = self.head
+        while a.next is not None:
+            a = a.next
+        a.next = ne
+
 
 n1 = Node(5)
 sll = LinkedList()
@@ -48,4 +56,6 @@ sll.traversal()
 
 # Calling the insert_at_beginning() 
 sll.insert_at_beginning(66)
+sll.traversal()
+sll.insert_at_End(39)
 sll.traversal()
