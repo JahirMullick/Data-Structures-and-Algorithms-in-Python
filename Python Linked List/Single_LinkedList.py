@@ -29,13 +29,13 @@ class LinkedList:
     
 
     def insert_at_beginning(self,data):  # data = 66
-        print()
+        print("\ninsert at the beginning -->")
         nb = Node(data)     #nb = Node(66)
         nb.next = self.head  # nb.next = n1
         self.head = nb       # sll.head = nb
 
     def insert_at_End(self,data):
-        print()
+        print("\ninsert at the End -->")
         ne = Node(data)
         a = self.head
         while a.next is not None:
@@ -44,13 +44,41 @@ class LinkedList:
 
 
     def insert_at_Specified_Node(self,pos,data):
-        print()
+        print("\ninsert at Specified Node-->")
         npn = Node(data)
         a = self.head
         for i in range(1,pos-1):
             a = a.next
         npn.next = a.next
         a.next = npn
+
+
+    def deletion_at_beginning(self):
+        print("\ndeletion at beginning -->")
+        a = self.head
+        self.head = a.next
+        a.next = None
+
+    def Deletion_at_End(self):
+        print("\nDeletion at End -->")
+        prev = self.head
+        a = self.head.next
+        while a.next is not None:
+            a = a.next
+            prev = prev.next
+        prev.next = None
+
+    def Deletion_at_specified_position(self,pos):
+        print("\nDeletion node at specified position -->")
+        prev = self.head
+        a = self.head.next
+        for i in range(1, pos-1):
+            a = a.next
+            prev = prev.next
+        prev.next = a.next
+        a.next = None
+
+
 
 n1 = Node(5)
 sll = LinkedList()
@@ -69,4 +97,10 @@ sll.traversal()
 sll.insert_at_End(39)
 sll.traversal()
 sll.insert_at_Specified_Node(3,100)
+sll.traversal()
+sll.deletion_at_beginning()
+sll.traversal()
+sll.Deletion_at_End()
+sll.traversal()
+sll.Deletion_at_specified_position(3)
 sll.traversal()
